@@ -1,0 +1,5 @@
+﻿  DoubleList.cpp
+c:\users\central\documents\classes\lists\doublelist\doublelist\doublelist.cpp(76): warning C4553: '==': operator has no effect; did you intend '='?
+c:\users\central\documents\classes\lists\doublelist\doublelist\doublelist.cpp(77): warning C4553: '==': operator has no effect; did you intend '='?
+c:\users\central\documents\classes\lists\doublelist\doublelist\doublelist.cpp(119): warning C4715: 'List::Find': not all control paths return a value
+  DoubleList.vcxproj -> C:\Users\Central\Documents\classes\lists\DoubleList\Debug\DoubleList.exe
