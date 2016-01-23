@@ -1,5 +1,3 @@
-// DoubleList.cpp : Defines the entry point for the console application.
-//
 
 #include "stdafx.h"
 #include <iostream>
@@ -59,7 +57,7 @@ void List::Display()
 	Node *node = new Node;
 	node = nHead;
 	int j = 0;
-	while (node != NULL)
+	while (node != nullptr)
 	{
 		cout<<" Node: "<<j<< " Data: "<<node->Data<<endl;
 		node = node->Next;
