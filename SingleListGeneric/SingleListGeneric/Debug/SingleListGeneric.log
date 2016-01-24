@@ -1,0 +1,3 @@
+﻿  SingleListGeneric.cpp
+c:\users\central\documents\github\datastructures\singlelistgeneric\singlelistgeneric\singlelistgeneric.cpp(67): warning C4715: 'IntList<double>::Find': not all control paths return a value
+  SingleListGeneric.vcxproj -> C:\Users\Central\Documents\GitHub\DataStructures\SingleListGeneric\Debug\SingleListGeneric.exe

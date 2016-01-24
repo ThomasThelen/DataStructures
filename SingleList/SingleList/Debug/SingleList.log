@@ -1,0 +1,3 @@
+﻿  SingleList.cpp
+c:\users\central\documents\github\datastructures\singlelist\singlelist\singlelist.cpp(55): warning C4715: 'IntList::Find': not all control paths return a value
+  SingleList.vcxproj -> C:\Users\Central\Documents\GitHub\DataStructures\SingleList\Debug\SingleList.exe
