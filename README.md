@@ -1,18 +1,18 @@
 # DataStructures
 Various data structures implemented in c++
 
-##SingleList
+## SingleList
 
 This is a singly linked list which can hold integer type data.
 
-##SingleListGeneric
+## SingleListGeneric
 
-A generic singly linked list which, due to templates, can take any data type.
+This is the SingleList project but templated so that it can take any type, rather than just an integer
 
-##DoubleList
+## DoubleList
 
-This is a doubly linked list which can take an integer type as data. This can be templated to create a generic linked list.
+This is a doubly linked list which can take an integer type as data.
 
 ##DoubleListGeneric
 
-The DoubleList except templated to take any data type
+The DoubleList project done with templates to take any type
