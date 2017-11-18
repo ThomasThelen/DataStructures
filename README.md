@@ -1,3 +1,4 @@
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) 
 [![BCH compliance](https://bettercodehub.com/edge/badge/ThomasThelen/DataStructures?branch=master)](https://bettercodehub.com/)
 
 # DataStructures
@@ -15,6 +16,6 @@ This is the SingleList project but templated so that it can take any type, rathe
 
 This is a doubly linked list which can take an integer type as data.
 
-##DoubleListGeneric
+## DoubleListGeneric
 
 The DoubleList project done with templates to take any type
