@@ -1,3 +1,5 @@
+[![BCH compliance](https://bettercodehub.com/edge/badge/ThomasThelen/DataStructures?branch=master)](https://bettercodehub.com/)
+
 # DataStructures
 Various data structures implemented in c++
 
