@@ -1,14 +1,14 @@
 #include "stdafx.h"
 #include <iostream>
-
+#include <memory>
 
 class IntNode
 {
 
 public:
-	IntNode() : NextNode(0) {};
+	IntNode() : NextNode(0), data(0) {};
 	int Value() { return data; }
-	IntNode *NextNode;
+	std::shared_ptr<IntNode> NextNode;
 	int data;
 	friend class IntList;
 };
@@ -16,19 +16,18 @@ public:
 class IntList
 {
 public:
-
 	IntList() : current_node(0), Head(0), Tail(0) {};
 	void DisplayList();
-	IntNode *Find(const int& i);
-	IntNode &RecursiveFind(const int& i, IntNode *start);
+	std::shared_ptr<IntNode> Find(const int& i);
+	std::shared_ptr<IntNode> RecursiveFind(const int& i, std::shared_ptr<IntNode> start);
 	bool AddHead(int i);
 	bool AddTail(int i);
-	IntNode *Current() { return current_node; }
-	IntNode *Head;
-protected:
-	IntNode *current_node;
+	std::shared_ptr<IntNode> Current() { return current_node; }
+	std::shared_ptr<IntNode> Head;
 
-	IntNode *Tail;
+protected:
+	std::shared_ptr<IntNode> current_node;
+	std::shared_ptr<IntNode> Tail;
 };
 
 void IntList::DisplayList()
@@ -41,7 +40,7 @@ void IntList::DisplayList()
 	}
 }
 
-IntNode *IntList::Find(const int& i)
+std::shared_ptr<IntNode> IntList::Find(const int& i)
 {
 	current_node = Head;
 	if (current_node->data == i)
@@ -57,7 +56,7 @@ IntNode *IntList::Find(const int& i)
 bool IntList::AddHead(int i)
 {
 
-	IntNode *NewHead = new IntNode;
+	std::shared_ptr<IntNode> NewHead = std::make_shared<IntNode> ();
 	if (!NewHead)
 	{
 		return false;
@@ -80,7 +79,7 @@ bool IntList::AddHead(int i)
 
 bool IntList::AddTail(int i)
 {
-	IntNode *TempNode = new IntNode;
+	std::shared_ptr<IntNode> TempNode = std::make_shared<IntNode>();
 	if (TempNode == 0)
 	{
 		return false;
@@ -97,14 +96,14 @@ bool IntList::AddTail(int i)
 
 
 
-IntNode &IntList::RecursiveFind(const int& i, IntNode *start)
+std::shared_ptr<IntNode> IntList::RecursiveFind(const int& i, std::shared_ptr<IntNode> start)
 {
-	IntNode *Temp = new IntNode;
+	auto Temp = std::make_shared<IntNode>();
 	Temp->data = start->data;
 	Temp->NextNode = start->NextNode;
 	if (start->data == i)
 	{
-		return *Temp;
+		return Temp;
 	}
 	else
 		return RecursiveFind(i, Temp->NextNode);
@@ -113,20 +112,17 @@ IntNode &IntList::RecursiveFind(const int& i, IntNode *start)
 
 
 
-
-
 int main()
 {
 	IntList list;
-	IntNode *Head = new IntNode;
-	IntNode *Temp = new IntNode;
+	auto Head = std::make_shared<IntNode>();
+	auto Temp = std::make_shared<IntNode>();
 	list.AddHead(10);
 	list.AddHead(2);
 	list.AddTail(4);
 	list.DisplayList();
-	IntNode *a = list.Find(2);
-
-	IntNode b = list.RecursiveFind(4, list.Head);
+	auto firstFind = list.Find(2);
+	auto secondFind = list.RecursiveFind(4, list.Head);
 
 	return 0;
 }

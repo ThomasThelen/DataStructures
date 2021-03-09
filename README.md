@@ -2,7 +2,8 @@
 [![BCH compliance](https://bettercodehub.com/edge/badge/ThomasThelen/DataStructures?branch=master)](https://bettercodehub.com/)
 
 # DataStructures
-Various data structures implemented in c++. Note that I made this ages and ages ago. No promises on code quality.
+I created this repository years and years ago in preparation for my first programming interview. I came back years and years later to fix all the nasty memory leaks by replacing raw pointers 
+with smart ones. This is unmaintained and was only fixed to help me sleep at night.
 
 ## SingleList
 
