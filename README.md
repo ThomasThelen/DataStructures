@@ -2,7 +2,7 @@
 [![BCH compliance](https://bettercodehub.com/edge/badge/ThomasThelen/DataStructures?branch=master)](https://bettercodehub.com/)
 
 # DataStructures
-Various data structures implemented in c++
+Various data structures implemented in c++. Note that I made this ages and ages ago. No promises on code quality.
 
 ## SingleList
 
